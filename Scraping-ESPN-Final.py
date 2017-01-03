@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as BS
 
-def main():
+def scrape():
 
 	url = "http://www.espncricinfo.com/ci/engine/match/index.html?view=live"
 	r=requests.get(url)
@@ -166,3 +166,6 @@ def main():
 				wickets += " "*(6-len(wickets))
 			economy = playerData[6].text
 			print playerName + "\t" + overs + "\t\t" + runs + "\t\t" + balls + "\t\t" + playerData[len(playerData)-1].text'''
+
+if __name__ == '__main__':
+	scrape()
