@@ -18,11 +18,11 @@ def scrape():
 
 	ch=input("\nChoose the event for which you wish to check out the matches (Press 0 to See All): ")
 
-	if ch>0:
-		matches=tableData[ch-1].find_all('section', {'class' : 'default-match-block'})
-	elif ch>len(tableData):
+	if ch>len(tableData):
 		print "Sorry. Invalid Input. Please run the terminal app again!"
 		exit(0)
+	elif ch>0:
+		matches=tableData[ch-1].find_all('section', {'class' : 'default-match-block'})
 	else:
 		matches=tableData[0].find_all('section', {'class' : 'default-match-block'})
 		for ix in range(1, len(tableData)):
