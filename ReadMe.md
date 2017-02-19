@@ -9,3 +9,5 @@ Version 2.0 brings bowling scorecards and a better UX.
 The script has been carefully crafted to handle improper inputs for flawless user experience.
 
 The code might seem crazy to look at as there has been a lot of scraping, cleaning and formatting of data. Further more, bowling scorecards have been directly extracted from the html code without the use of beautiful-soup. This has been done since the tables containing bowling scorecards were not extractable from beautiful-soup.
+
+Now, enter the team for which you wish to see the scorecard as a command line argument to directly skip to the scorecard!
